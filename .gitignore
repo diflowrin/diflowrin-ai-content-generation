@@ -1,0 +1,18 @@
+# Internal development notes — kept local, not published
+DEV-NOTES.md
+README-ro.md
+
+# Build artefacts / release zips
+*.zip
+
+# SVN working copies (WordPress.org deploys live outside this repo)
+.svn/
+
+# OS & editor cruft
+.DS_Store
+Thumbs.db
+desktop.ini
+.idea/
+.vscode/
+*.swp
+*~
