@@ -34,7 +34,7 @@ jobs:
 
     steps:
       - name: Check out the plugin
-        uses: actions/checkout@v4
+        uses: actions/checkout@v7
 
       - name: Work out the version being released
         id: version
@@ -103,7 +103,7 @@ jobs:
           SLUG: diflowrin-ai-content-generation
 
       - name: Keep the built zip with the workflow run
-        uses: actions/upload-artifact@v4
+        uses: actions/upload-artifact@v7
         with:
           name: diflowrin-ai-content-generation-${{ steps.version.outputs.version }}
           path: diflowrin-ai-content-generation.zip
