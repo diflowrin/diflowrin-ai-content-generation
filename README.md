@@ -87,6 +87,10 @@ Bug reports and pull requests are welcome via GitHub issues. When changing behav
 `readme.txt` — its feature list, FAQ and changelog — in step with the code, since that file is what
 users read on WordPress.org.
 
+Releases publish themselves: pushing a `v*` tag deploys to the WordPress.org directory through
+GitHub Actions. The procedure, including the version numbers that must agree before a deploy is
+allowed, is in [RELEASING.md](RELEASING.md).
+
 ## The desktop app
 
 The plugin is useful on its own. Connecting it to

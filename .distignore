@@ -1,0 +1,27 @@
+# Everything listed here is kept out of the WordPress.org trunk and the release
+# zip. These are rsync exclude patterns (the deploy action passes this file to
+# rsync --exclude-from), not gitignore patterns.
+#
+# WordPress.org only wants the plugin itself: PHP, assets/, readme.txt.
+
+# Version control & CI
+.git
+.gitignore
+.gitattributes
+.github
+.distignore
+
+# WordPress.org listing assets — these go to /assets in SVN, never into trunk
+.wordpress-org
+
+# Documentation. readme.txt is the plugin's real readme; every .md file here is
+# for GitHub or for local development, and Plugin Check flags stray markdown.
+*.md
+
+# Local development & build leftovers
+*.zip
+.DS_Store
+Thumbs.db
+.idea
+.vscode
+node_modules
