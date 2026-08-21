@@ -11,6 +11,9 @@
 .github
 .distignore
 
+# Release tooling — builds the zip, never travels inside it
+bin
+
 # WordPress.org listing assets — these go to /assets in SVN, never into trunk
 .wordpress-org
 
