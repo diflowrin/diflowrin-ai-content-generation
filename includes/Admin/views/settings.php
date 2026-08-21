@@ -6,6 +6,7 @@
  * @package Diflowrin\ContentGenerator
  */
 
+use Diflowrin\ContentGenerator\Services\OpenRouter;
 use Diflowrin\ContentGenerator\Settings\Settings;
 
 // phpcs:disable WordPress.NamingConventions.PrefixAllGlobals.NonPrefixedVariableFound -- template is require()d inside an Admin method, so these variables are function-scoped, not global.
@@ -62,9 +63,9 @@ $sonar_model   = Settings::get( 'sonar_model', Settings::DEFAULT_SONAR_MODEL );
 			<p class="ca-help">
 				<?php
 				printf(
-					/* translators: %s: link to openrouter.ai/keys */
+					/* translators: %s: link to the provider page where the key is created. */
 					esc_html__( 'Create a key at %s. Stored encrypted in your site database and used only for generation requests you trigger.', 'diflowrin-ai-content-generation' ),
-					'<a href="https://openrouter.ai/keys" target="_blank" rel="noopener noreferrer">openrouter.ai/keys</a>'
+					'<a href="' . esc_url( OpenRouter::KEYS_URL ) . '" target="_blank" rel="noopener noreferrer">' . esc_html( OpenRouter::link_label( OpenRouter::KEYS_URL ) ) . '</a>'
 				);
 				?>
 			</p>
@@ -165,7 +166,7 @@ $sonar_model   = Settings::get( 'sonar_model', Settings::DEFAULT_SONAR_MODEL );
 					/* translators: 1: example model slug, 2: link to the OpenRouter model list. */
 					esc_html__( 'OpenRouter model used for the featured image and for in-article illustrations, e.g. %1$s. Pick any model with image output from %2$s.', 'diflowrin-ai-content-generation' ),
 					'<code>' . esc_html( Settings::DEFAULT_IMAGE_MODEL ) . '</code>',
-					'<a href="https://openrouter.ai/models?output_modalities=image" target="_blank" rel="noopener noreferrer">openrouter.ai/models</a>'
+					'<a href="' . esc_url( OpenRouter::IMAGE_MODELS_URL ) . '" target="_blank" rel="noopener noreferrer">' . esc_html( OpenRouter::link_label( OpenRouter::IMAGE_MODELS_URL ) ) . '</a>'
 				);
 				?>
 			</p>

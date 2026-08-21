@@ -18,7 +18,33 @@ defined( 'ABSPATH' ) || exit;
  */
 class OpenRouter {
 
-	const BASE = 'https://openrouter.ai/api/v1';
+	/**
+	 * Provider root. Every other OpenRouter URL in the plugin is derived from it,
+	 * so the provider is named in exactly one place.
+	 */
+	const SITE = 'https://openrouter.ai';
+
+	const BASE = self::SITE . '/api/v1';
+
+	/** Where a user creates the API key this plugin asks for. */
+	const KEYS_URL = self::SITE . '/keys';
+
+	/** Model catalogue, filtered to the models that can return an image. */
+	const IMAGE_MODELS_URL = self::SITE . '/models?output_modalities=image';
+
+	/**
+	 * Display form of one of the URLs above: host and path, no scheme or query,
+	 * so a link in the admin reads "openrouter.ai/keys".
+	 *
+	 * @param string $url One of the URL constants on this class.
+	 * @return string
+	 */
+	public static function link_label( $url ) {
+		$host = (string) wp_parse_url( $url, PHP_URL_HOST );
+		$path = (string) wp_parse_url( $url, PHP_URL_PATH );
+
+		return $host . rtrim( $path, '/' );
+	}
 
 	/**
 	 * @var string

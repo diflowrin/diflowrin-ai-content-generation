@@ -2,7 +2,7 @@
 /**
  * Plugin Name:       Diflowrin AI Content Generation
  * Description:       Write SEO-ready articles with AI (BYOK via OpenRouter) and connect your site to the SEO Content Architect desktop app for bulk generation, auto-posting and social distribution.
- * Version:           1.2.0
+ * Version:           1.2.1
  * Requires at least: 5.6
  * Requires PHP:      7.4
  * Author:            Diflowrin
@@ -19,7 +19,7 @@ defined( 'ABSPATH' ) || exit; // No direct access.
 // ---------------------------------------------------------------------------
 // Constants
 // ---------------------------------------------------------------------------
-define( 'DIFLOWRIN_CG_VERSION', '1.2.0' );
+define( 'DIFLOWRIN_CG_VERSION', '1.2.1' );
 define( 'DIFLOWRIN_CG_FILE', __FILE__ );
 define( 'DIFLOWRIN_CG_PATH', plugin_dir_path( __FILE__ ) );
 define( 'DIFLOWRIN_CG_URL', plugin_dir_url( __FILE__ ) );

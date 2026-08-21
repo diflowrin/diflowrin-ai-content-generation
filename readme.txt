@@ -3,9 +3,9 @@
 Contributors: diflowrin
 Tags: ai, content writer, seo, openrouter, auto post
 Requires at least: 5.6
-Tested up to: 7.0
+Tested up to: 7.1
 Requires PHP: 7.4
-Stable tag: 1.2.0
+Stable tag: 1.2.1
 License: GPLv2 or later
 License URI: https://www.gnu.org/licenses/gpl-2.0.html
 
@@ -116,8 +116,15 @@ WordPress Application Passwords require a secure (HTTPS) connection. The Connect
 
 1. Generate an article — turn a topic, or just a source URL, into a publish-ready draft with your own OpenRouter key. Choose tone, length and one of 50 languages; Sonar web research grounds every draft in live data.
 2. Connect your site to the SEO Content Architect desktop app in one click, using WordPress Application Passwords — no password is ever stored by the plugin.
+3. Settings — bring your own OpenRouter key and pick the model you write with. Choose where images come from: AI generation invents a picture from your article, or free Pexels stock photos credited to the photographer. Both keys are stored encrypted in your own database.
+4. Settings, continued — keep a consistent image style, decide whether generated pictures may contain text, edit the AI disclosure notice added at the end of an article, and switch on Perplexity Sonar so every draft is grounded in live web research.
 
 == Changelog ==
+
+= 1.2.1 =
+* Tested with WordPress 7.1.
+* The plugin listing now shows the Settings screen as well, so you can see what you are configuring before you install.
+* Housekeeping only: no change to how articles or images are generated.
 
 = 1.2.0 =
 
